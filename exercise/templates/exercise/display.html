@@ -1,0 +1,82 @@
+{% extends "exercise/layout.html" %}
+{% load static %}
+
+{% block body %}
+	<div class="pt-3 text-center" style="color: white">
+		<div class="mt-4">
+			<a href="{% url 'index' %}" class="" id="title" style="color: #8860D0"><i class="fas fa-running mb-3" style="font-size: 110px; opacity:80%"></i><img src="https://fontmeme.com/permalink/200822/9d8ae9d4d5e5e557997c473ceba3cc94.png" alt="fancy-fonts" border="0"></a>
+		</div>
+	</div>
+	<div class="d-flex justify-content-center nav mt-5">
+		<a href="#" class="px-2 mx-3 btn-main" id="list">Run List</a>
+		<a href="#" class="px-2 mx-3 btn-main" id="goals">Goals & Personal Records</a>
+		<a href="#" class="px-2 mx-3 btn-main" id="stats">Stats</a>
+	</div>
+
+	<div id="home-view" class="my-5" style="display: block">
+		<p class="list-background" style="font-size: 30px; color: black"> This site was done for CS50 Web (2020). It is a single page application created with Django, Javascript, Python, HTML and CSS. I also used libraries like Bootstrap and Chart.js. This application displays information about my runs as recorded by my GPS watch. Data is automatically uploaded to the Garmin Connect app on my phone, which is then sent to the Strava app where I then access the data via API. </p>
+	</div>
+
+	<div id="list-view" class="my-5" style="display: none"> 
+		<div class="row text-center" style="font-size: 23px">
+			<div class="col-3">
+				<strong>Date</strong>
+			</div>
+			<div class="col-2">
+				<strong>Distance</strong>
+			</div>
+			<div class="col-2">
+				<strong>Elapsed Time</strong>
+			</div>
+			<div class="col-3">
+				<strong>Average Pace</strong>
+			</div>			
+			<div class="col-2 text-right">
+				<strong> Elevation Gain </strong>
+			</div>		
+		</div>
+		<hr style="color:black;" class="mb-n1">
+	</div>
+
+	<div id="stats-view" class="my-5" style="display: none">
+		<canvas id="chart"></canvas>
+		<div class="mx-3">
+			<button type="button" data-toggle="button" class="btn btn-secondary" disabled>2019</button>
+			<button type="button" data-toggle="button" class="btn btn-secondary active" aria-pressed="true">2020</button>
+			<button type="button" data-toggle="button" class="btn btn-secondary" disabled>2021</button>
+		</div>
+	</div>
+
+	<div id="goals-view" class="my-5" style="display: none">
+		<div class="row text-center">
+			<div class="col-7">
+				<h2> Goals </h2>
+				<div class="mt-3">
+					<p class="goal-box"> Mile Time: 7 Minutes</p>
+					<p class="goal-box"> 5K Time: 24 Minutes </p>
+					<p class="goal-box"> 10K Time: 50 Minutes </p>
+					<div class="goal-box text-center">
+						<p> 250 miles total in 2020 </p>
+						<div id="bar-outline">
+							<div id="bar"></div>
+						</div>
+						<p id="progress"> </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-5">
+				<h2> Personal Records </h2>
+				<div class="mt-3">
+					<p class="goal-box"> Fastest Mile: <strong> 7:43 </strong></p>
+					<p class="goal-box"> Fastest 5k: <strong> 24:46 </strong></p>
+					<p class="goal-box"> Fastest 10k: <strong> N/A </strong></p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+
+{% block script %}
+	<script src="{% static 'exercise/stats.js' %}"> </script>
+{% endblock %}

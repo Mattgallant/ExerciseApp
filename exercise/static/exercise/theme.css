@@ -1,0 +1,122 @@
+
+.main-background{
+	background: radial-gradient(circle, rgba(193,200,228,1) 0%, rgba(90,185,234,1) 73%);
+}
+
+.title{
+	color:white;
+	background-color: white;
+}
+
+.btn-main{
+	background-color: #5680E9;
+	color: white;
+	border-radius: 15px;
+	font-size: 30px;
+	padding: 5px;
+	box-shadow: 2px 2px black;
+	opacity: 70%;
+	font-family: arial;
+}
+
+.btn-main:hover{
+	opacity: 100%;
+	box-shadow: 3px 3px black;
+}
+
+.btn-sub{
+	background-color: #5680E9;
+	color: white;
+	border: 1px solid #c1c8e4;
+	border-radius: 15px;
+	font-size: 22px;
+	padding: 4px;
+}
+
+.list-background{
+	background-color: #C1C8E4;
+	border-radius: 12px;
+	padding: 5px;
+	opacity: 80%;
+	box-shadow: 2px 2px;
+}
+
+@keyframes fade_in {
+    from {
+        opacity: 0%;
+        font-size: 1px;
+    }
+    to {
+       	opacity: 80%;
+        font-size: 18px;
+    }
+}
+
+@keyframes grow{
+	from{
+		opacity: 80%;
+		font-size:18px;
+		height: 100%;
+	}
+	to{
+		opacity: 80%;
+		font-size: 20px;
+		height: 200%;
+	}
+}
+
+.run-item{
+	animation-name: fade_in;
+	animation-duration: 2s;
+}
+
+.run-item-font{
+	font-size: 18px;
+}
+
+.run-item:hover{
+	background-color: white;
+	animation-name: grow;
+	animation-duration: 1s;
+}
+
+.expanded{
+	opacity: 80%;
+	font-size: 22px;
+	background-color: white;
+}
+
+
+
+.goal-box{
+	background-color: #C1C8E4;
+	border-radius: 12px;
+	padding: 5px;
+	opacity: 80%;
+	box-shadow: 2px 2px;
+	font-size: 25px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.purple-highlight{
+	color: #8860D0;
+}
+
+#bar {
+  width: 1%;
+  height: 30px;
+  background-color: #8860D0;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 30px; /* To center it vertically */
+}
+
+#bar-outline{
+	width: 100%;
+	height: 34px;
+	border: 2px solid black;
+	border-radius: 8px;
+}
