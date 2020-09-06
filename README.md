@@ -13,4 +13,7 @@ This project was completed as the last project for Harvard CS50 Web class. I cho
 
 The rest of the files are mostly just Django default files that have not been edited very much. The only real function of interest is in **views.py** where I have set up an API function that returns a JSON object so that my frontend can access run data. 
 
-**This web app is currently not hosted. Please visit this youtube link to see a video demonstration.** https://www.youtube.com/watch?v=qgztZabJmc0
+**This web app is now hosted! Please also visit this youtube link to see a video demonstration.** https://www.youtube.com/watch?v=qgztZabJmc0
+
+
+https://matt-exercise-stats.herokuapp.com/
