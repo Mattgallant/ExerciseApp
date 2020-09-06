@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'paaljvqwhiskm9(=&vq__n1d5l6$o&o2q#y1uzx^ww$^=vph=h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['matt-exercise-stats.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
