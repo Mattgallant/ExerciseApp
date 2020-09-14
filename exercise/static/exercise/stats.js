@@ -84,9 +84,9 @@ function load_goals(){
 				}
 			}
 			//Display progress bar for cumulative miles
-			move(0, cumulative_miles[11], 250);
+			move(0, cumulative_miles[11], 350);
 			document.getElementById("progress").innerHTML = `
-				${cumulative_miles[11]}/250
+				${cumulative_miles[11]}/350
 			`
 		});
 }
